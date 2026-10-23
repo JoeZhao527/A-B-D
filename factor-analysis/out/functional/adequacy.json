@@ -1,0 +1,41 @@
+{
+  "bartlett": {
+    "chi2": 5712.870819345191,
+    "df": 465,
+    "p": 0.0
+  },
+  "kmo_overall": 0.8888719423893201,
+  "msa": {
+    "F:C_trans_entropy": 0.9274333770377492,
+    "F:B_units_per_step": 0.9370223840421206,
+    "F:A_prop_Reasoning": 0.8201465683973941,
+    "F:A_entropy": 0.924637443907559,
+    "F:C_trans_Planning>Planning": 0.9515492789242723,
+    "F:A_prop_Planning": 0.8356848682376913,
+    "F:D_early_Reasoning": 0.8286496207265626,
+    "F:A_density": 0.9356938401749401,
+    "F:C_trans_Reasoning>Planning": 0.9581768328292772,
+    "F:C_trans_Reasoning>Reasoning": 0.9270905733953629,
+    "F:C_trans_Executing>Reasoning": 0.9504573432759241,
+    "F:C_trans_Planning>Reasoning": 0.9560137154978879,
+    "F:C_trans_Executing>Planning": 0.9433488002627464,
+    "F:D_early_Planning": 0.8338829227258625,
+    "F:D_mid_Reasoning": 0.8305890360465512,
+    "F:A_prop_Grounding": 0.8763465452340417,
+    "F:D_mid_Planning": 0.8415061140419814,
+    "F:C_trans_Evaluate>Planning": 0.9307070157901076,
+    "F:C_trans_Reflection>Planning": 0.927213121922886,
+    "F:A_prop_Reflection": 0.813381782627769,
+    "F:D_late_Executing": 0.9345778816847077,
+    "F:C_trans_Reflection>Executing": 0.8864702858746338,
+    "F:C_trans_Deciding>Planning": 0.9260290879271934,
+    "F:D_late_Reasoning": 0.7880856825986197,
+    "F:C_trans_Reflection>Reasoning": 0.8967446738096797,
+    "F:C_trans_Evaluate>Reasoning": 0.9407170285441416,
+    "F:C_trans_Planning>Executing": 0.6946557527756286,
+    "F:D_mid_Executing": 0.8742153224670605,
+    "F:A_prop_Retrieval": 0.8562179695332661,
+    "F:D_late_Planning": 0.8288498148688098,
+    "F:D_mid_Retrieval": 0.8232154501309275
+  }
+}

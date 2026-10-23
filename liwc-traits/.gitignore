@@ -1,0 +1,5 @@
+# step 2.1 writes the prose export here, and the LIWC-22 output of step 2.2 goes next to it
+data/*
+!data/.gitkeep
+# feature table from step 2.3
+out/

@@ -1,0 +1,121 @@
+code,Action,Subaction,Instance,definition
+T1.1.1.1,Retrieval,Retrieve from skill library,Retrieve from skill library,"grab pre-built skill snippet (e.g., Minecraft ""chop tree"")"
+T1.1.2.1,Retrieval,Retrieve from local corpus,Retrieve from local corpus,diverse-filetype reading; read between 1 and 15 documents/tables; opening a README or source file in the repo
+T1.1.3.1,Retrieval,Retrieve from external knowledge base,Retrieve from external knowledge base,"recall N relevant distinct problems / query a curated bug or skill repository (e.g., BugRAG)"
+T1.1.4.1,Retrieval,Retrieve from open web,Retrieve from open web,high reliance on web search to offload knowledge retrieval
+T1.1.5.1,Retrieval,Retrieve relevant context,Retrieve relevant context,"leverage retrieved domain context (e.g., HLS-related context for code transformation)"
+T1.2.1.1,Memory,Store Information,Store information in working memory,scratchpad for current inputs and intermediate results
+T1.2.1.2,Memory,Store Information,Store episodic trajectories,record full action sequences for later training
+T1.2.1.3,Memory,Store Information,Store knowledge in semantic memory,save general world facts
+T1.2.1.4,Memory,Store Information,Store experiences in episodic memory,save events as episodes
+T1.2.1.5,Memory,Store Information,Store information in long-term memory,write to external storage
+T1.2.1.6,Memory,Store Information,Maintain curriculum library,keep a syllabus of mastered/upcoming skills
+T1.2.2.1,Memory,Update Information,Update memory,update prior experiences
+T1.2.3.1,Memory,Discard information,Discard information from working memory,discard local memory after subtask completion
+T1.2.3.2,Memory,Discard information,"Discard redundant game state, keep summaries",automatic context compaction preserving only summaries
+T1.2.4.1,Memory,Consolidate memory,Consolidate working memory into long-term memory,retain only successful analysis path to global memory
+T1.2.4.2,Memory,Consolidate memory,Compact context window,automatic context compaction to manage thousands of reasoning steps
+T1.2.5.1,Memory,Read memory,Read from working memory,"refer back to issue text, prior tool output, current view state"
+T1.2.5.2,Memory,Read memory,Read from long-term memory,importance-weighted retrieval of discoveries
+T2.1.1.1,Planning,Decompose task,Decompose into subtasks,"e.g., `todo_write` style breakdowns"
+T2.1.1.2,Planning,Decompose task,Decompose into subgoals with success conditions,pair each subgoal with an executable check
+T2.1.1.3,Planning,Decompose task,Decompose by role specialization,split instruction-following into reasoner vs. actor agents
+T2.1.2.1,Planning,Formulate a workflow or plan,Formulate a high-level plan,identify strategic actions across a whole transcript
+T2.1.2.2,Planning,Formulate a workflow or plan,Formulate an analysis workflow,comprehensive analysis pipeline
+T2.1.2.3,Planning,Formulate a workflow or plan,Plan navigation through environment,"e.g., multi-page web navigation"
+T2.1.2.4,Planning,Formulate a workflow or plan,Plan function or tool use,pick the specific method/library before invoking
+T2.1.2.5,Planning,Formulate a workflow or plan,Plan Code or artifact structure,HTML structure / CSS styling / JS functionality
+T2.1.2.6,Planning,Formulate a workflow or plan,Formulate plan from template,"combine directives, target segments, insertion actions"
+T2.1.3.1,Planning,Select Strategy,Select among candidate strategies,pick the most effective combination
+T2.1.3.2,Planning,Select Strategy,Switch to fallback strategy,"adopt a fallback (e.g., dummy score prediction)"
+T2.1.4.1,Planning,Modify Plan,Replan dynamically based on feedback,`RequireReplan`-style dynamic adjustment
+T2.1.4.2,Planning,Modify Plan,Refine Requirements,refine requirement based on validated test cases
+T2.2.1.1,Reasoning,Generating,Generate candidate options,brainstorm possible next moves
+T2.2.1.2,Reasoning,Generating,Generate structured artifacts,"emit initial codes, themes, draft patches"
+T2.2.1.3,Reasoning,Generating,Generate evaluations,produce diverse debugging instructions or scoring rubrics
+T2.2.2.1,Reasoning,Analysing,Analyse artifact structure and behavior,"frontend framework, components"
+T2.2.2.2,Reasoning,Analysing,Detect patterns or trends in data,patterns/directions/changes over time/contexts
+T2.2.2.3,Reasoning,Analysing,Interpret meaning of artifacts,"logical, mathematical, causal interpretation"
+T2.2.2.4,Reasoning,Analysing,Classify inputs into categories,delegator routing by metadata tokens
+T2.2.3.1,Reasoning,Explaining,Explain reasoning or outcomes,explain a failure from a user-requirement perspective
+T2.2.4.1,Reasoning,Summarizing/Distilling,Summarize recent observations and trajectories,condense recent observations into key takeaways
+T2.2.5.1,Reasoning,Inferring,Infer hidden state from observable evidence,damage calc reveals stat distributions
+T2.2.5.2,Reasoning,Inferring,Infer causal relationship,determine plausible causal factor
+T2.2.5.3,Reasoning,Inferring,Infer structure from indirect evidence,directory layout from package structure / READMEs
+T2.2.5.4,Reasoning,Inferring,Infer errors,identify exactly one bug at a time
+T2.2.6.1,Reasoning,Comparing & Ranking,Compare values across sources,quantify and compare across sources
+T2.2.6.2,Reasoning,Comparing & Ranking,Rank items by criteria,order items by importance / match-count / score
+T2.2.7.1,Reasoning,Contextualizing,Package prior reasoning as context for subsequent calls,feed reasoning so far as next-call context
+T2.2.7.2,Reasoning,Contextualizing,Construct structured context object,build a global state representation
+T2.2.7.3,Reasoning,Contextualizing,Configure agent persona or role-conditioning,"""play as X, imitate X's personality"""
+T2.2.7.4,Reasoning,Contextualizing,Assign roles in a multi-agent team,map agents to organizational employees
+T2.2.8.1,Reasoning,Combining & Synthesis,Combine information from multiple sources,fuse multiple sources into a coherent solution
+T2.2.8.2,Reasoning,Combining & Synthesis,Aggregate observations into a structured representation,supplementary semantic map / majority voting
+T2.2.9.1,Reasoning,Filtering,Filter information by threshold,selecting relevant information by criteria/quality
+T2.3.1.1,Evaluate,Evaluating with gold,Compare against gold reference,review correct code against buggy segments
+T2.3.1.2,Evaluate,Evaluating with gold,Score on gold criteria,Gold Checker on equivalence / completeness / correctness
+T2.3.2.1,Evaluate,Evaluating with goals/requirements/constraints,goal-completion check,independently verify objectives are truly complete
+T2.3.2.2,Evaluate,Evaluating with goals/requirements/constraints,Requirement-satisfaction check,synthesise subtasks to meet user requirements
+T2.3.2.3,Evaluate,Evaluating with goals/requirements/constraints,Constraint / budget check,QoR-aware reasoning aligned with hardware constraints
+T2.3.2.4,Evaluate,Evaluating with goals/requirements/constraints,Domain-rule / best-practice check,"codified ordering (e.g., QC must precede normalization)"
+T2.3.3.1,Evaluate,Evaluating without ground truth,Score on quality dimensions,N-dimension rubric scored 0–2
+T2.3.3.2,Evaluate,Evaluating without ground truth,Check rubric compliance,verify implementation of every rubric item
+T2.3.3.3,Evaluate,Evaluating without ground truth,Evaluate visual/behavioral correctness,dynamic behaviour / screenshot evaluation
+T2.3.3.4,Evaluate,Evaluating without ground truth,Evaluate internal consistency,theme consistency with supporting quotes
+T2.3.3.5,Evaluate,Evaluating without ground truth,Evaluate intermediate results,domain-expert agents verify intermediate results
+T2.3.3.6,Evaluate,Evaluating without ground truth,Provide qualitative judgement,Evaluator agent emits NL feedback
+T2.3.3.7,Evaluate,Evaluating without ground truth,Simulate counterfactual outcomes,"""if I do X, what happens?"" / counterfactual trajectory"
+T2.3.3.8,Evaluate,Evaluating without ground truth,Validate predicted issues,assess contextual applicability of bug candidates
+T2.4.1.1,Deciding,Make a decision,Make a decision according to memory,condition decision on history buffer
+T2.4.2.1,Deciding,Pick scores,Select action by score,argmax / softmax / majority vote across evaluators
+T2.4.3.1,Deciding,Decide accept or not,Decline out-of-scope queries,reject queries that exceed knowledge boundaries
+T2.4.4.1,Deciding,Decide under uncertainty,Fork trajectory at uncertainty,fork generative state and run a parallel trajectory
+T3.1.1.1,Grounding,Interact with users,Accept instructions from humans,receive task or command from human user
+T3.1.1.2,Grounding,Interact with users,Ask for clarification from people,proactively ask when unclear
+T3.1.1.3,Grounding,Interact with users,Communicate task outcome natural language,"""Buy a nice rich navy bathing dress"""
+T3.1.1.4,Grounding,Interact with users,Communicate via visualization,generate plots / figures for human consumption
+T3.1.1.5,Grounding,Interact with users,Communicate via structured format,JSON / list-of-JSON outputs
+T3.1.1.6,Grounding,Interact with users,Communicate refusal/inability,recognise and refuse out-of-scope queries
+T3.1.1.7,Grounding,Interact with users,Express tone to user,affirmation / apology / gratitude patterns
+T3.1.1.8,Grounding,Interact with users,Disclose self-information to user,"identity disclosure (""I am an intelligent assistant"")"
+T3.1.2.1,Grounding,Interact with physical environments,Perceive physical environment,convert images to text via VLMs
+T3.1.2.2,Grounding,Interact with physical environments,Affect physical environments,send language commands to robot arm
+T3.1.3.1,Grounding,Interact with digital environments,Navigate digital interfaces,"browse websites, scroll, navigate menus"
+T3.1.3.2,Grounding,Interact with digital environments,Modify digital objects,annotate UI components
+T3.1.3.3,Grounding,Interact with digital environments,Issue operational commands,invoke a structured API or data endpoint
+T3.1.4.1,Grounding,Interact with other agents,Monitor peer agent's state or decision,observe before acting (oversight prerequisite)
+T3.1.4.2,Grounding,Interact with other agents,Receive feedback from peer agent,Evaluator natural-language feedback
+T3.1.4.3,Grounding,Interact with other agents,Send message to peer agent,multi-turn message-passing toward deliverables
+T3.1.4.4,Grounding,Interact with other agents,Recommend action to peer agent,agent-to-agent advisory communication
+T3.1.4.5,Grounding,Interact with other agents,Override peer agent's decision,replace peer's selected action
+T3.1.4.6,Grounding,Interact with other agents,Dispatch task to sub-agent,orchestrator dynamically delegates by context
+T3.1.4.7,Grounding,Interact with other agents,Argue or debate with peer agent,multi-agent argumentation toward better answer
+T3.1.5.1,Grounding,Augment with external computation,Execute code,Test Runner / language interpreter
+T3.1.5.2,Grounding,Augment with external computation,Invoke specialized computation tool,calculator / heavy-compute tool
+T3.1.5.3,Grounding,Augment with external computation,Invoke visual inspection tool,zoom-in / region-of-interest
+T3.2.1.1,Executing,Executing plan,Execute strategy,insertion agent executes HLS-C optimization
+T3.2.2.1,Executing,Executing debug,Adopt debugging instructions,strict-instruction debugging implementation
+T3.2.2.2,Executing,Executing debug,Rewrite code after bug fix,debugging specialist rewrites the entire file
+T3.2.3.1,Executing,Terminating,Provide final answer,`Final Answer: ...`
+T3.2.3.2,Executing,Terminating,Generate refusal,clear refusal response with explanation
+T4.1.1.1,Learning,Learning reasoning,Update reasoning via prompt update,rewrite the agent's own prompt template
+T4.1.2.1,Learning,Learning grounding,Update grounding via code-based skills,improve web-navigation code snippets
+T4.1.2.2,Learning,Learning grounding,Update retrieval procedures,"better keyword strategies, smarter ranking"
+T4.1.3.1,Learning,Learning knowledge,Update source code as procedural memory,self-patch the agent's own source
+T4.1.3.2,Learning,Learning knowledge,Update semantic memory with knowledge,expand error repository with new mnemonic
+T4.1.3.3,Learning,Learning knowledge,Update memory from new experiences,refine textual memories as new scenarios appear
+T4.1.3.4,Learning,Learning knowledge,Update hypothesis with new evidence,update textual understanding / refine hypothesis
+T4.1.4.1,Learning,Learning LLM parameters,Update parametric policy,change internal weights through training
+T4.1.4.2,Learning,Learning LLM parameters,Update LLM parameters via SL/RL/RLHF,supervised / RL / human-feedback weight adjustment
+T4.1.4.3,Learning,Learning LLM parameters,Update action parameters based on feedback,auto-adjust params from exception info
+T4.1.5.1,Learning,Learning instructions,Learning instructions,extract a rule from input/output examples for future use
+T4.2.1.1,Reflection,Reflect on errors and failures,Diagnose failure against ground truth,analyse stuck states by comparing against ground truth sources
+T4.2.1.2,Reflection,Reflect on errors and failures,Inspect Error Pattern,examine erroneous code and parsed error messages
+T4.2.1.3,Reflection,Reflect on errors and failures,Analyze log to formulate fix instructions,reasoning-to-instruction on tool log
+T4.2.1.4,Reflection,Reflect on errors and failures,Reflect on failed episodes for prior knowledge,`RequireReplan`-style robustness improvement
+T4.2.1.5,Reflection,Reflect on errors and failures,Self-Correct Step Implementation,modify step implementation based on error message
+T4.2.2.1,Reflection,Reflect on self-outcomes,Self-reflect,feed execution results back to refine responses
+T4.2.2.2,Reflection,Reflect on self-outcomes,Reflect on proposed fix,reflect on the code after the fix to ensure modification is reasonable
+T4.2.2.3,Reflection,Reflect on self-outcomes,Pre-action self-check,self-monitoring / explicit reasoning before issuing commands
+T4.2.2.4,Reflection,Reflect on self-outcomes,Refine Strategy Iteratively,iterative refinement using current QoR
+T4.2.3.1,Reflection,Reflect on external feedback,Receive and integrate external feedback,Evaluator-driven self-reflective optimization

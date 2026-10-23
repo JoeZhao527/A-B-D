@@ -1,0 +1,48 @@
+{
+  "parcel": {
+    "enabled": false,
+    "r_threshold": 0.8,
+    "linkage": "complete",
+    "scope": "all",
+    "align_sign": true,
+    "min_pc1": 0.7,
+    "min_alpha": 0.8
+  },
+  "retention": {
+    "rule": "parallel",
+    "pa_percentile": 95.0,
+    "pa_n_random": 500,
+    "pa_basis": "pca",
+    "pa_data": "normal",
+    "map_power": 2,
+    "k_fixed": null,
+    "k_min": 1,
+    "k_max": null
+  },
+  "extract": {
+    "method": "paf",
+    "max_iter": 100,
+    "tol": 1e-06
+  },
+  "rotate": {
+    "method": "varimax",
+    "promax_power": 4,
+    "kaiser_normalize": true
+  },
+  "scores": {
+    "method": "regression",
+    "standardize": true,
+    "ridge": 0.1
+  },
+  "seed": 0,
+  "loading_cutoff": 0.4,
+  "drop_models_with_nan": true,
+  "meta": {
+    "matrix": "trait-tests/out/model_trait_matrix.csv",
+    "family": "functional",
+    "n_models": 78,
+    "p_traits": 31,
+    "p_parcels": 31,
+    "k": 2
+  }
+}

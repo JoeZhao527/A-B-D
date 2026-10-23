@@ -1,0 +1,7 @@
+{
+  "k": 4,
+  "rule": "parallel",
+  "parallel_k": 4,
+  "kaiser_k": 9,
+  "map_k": 16
+}
